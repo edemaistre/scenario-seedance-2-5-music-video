@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "master": {
+    "path": "masters/approved-master.wav",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "decoded_duration_seconds": 30.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "rights": {
+      "status": "authorized",
+      "basis": "user-confirmed master"
+    }
+  },
+  "delivery": {
+    "container": "mp4",
+    "geometry": {"width": 1280, "height": 720},
+    "aspect_ratio": "16:9",
+    "frame_rate": {"fps_num": 24, "fps_den": 1},
+    "resolution": "720p",
+    "audio_policy": {
+      "source": "supplied_master",
+      "start_seconds": "0.000",
+      "clip_audio": "discard",
+      "codec_policy": "copy_compatible_else_aac_320k"
+    }
+  },
+  "reference_pack": {
+    "source": "generated",
+    "approval": "approved",
+    "assets": [
+      {"id": "performer-anchor", "path": "references/performer-anchor.png", "scenario_asset_id": "asset_i", "roles": ["performer", "wardrobe"]},
+      {"id": "master-guide", "path": "masters/approved-master.wav", "scenario_asset_id": "asset_a", "roles": ["timing", "energy"]}
+    ]
+  },
+  "lyrics": {
+    "state": "scenario_transcription",
+    "certainty": "uncertain",
+    "transcript_path": "analysis/scenario-transcript.txt"
+  },
+  "shots": [
+    {
+      "id": "shot-001",
+      "timeline": {"start_frame": 0, "end_frame": 720},
+      "accepted_source": {
+        "path": "clips/shot-001.mp4",
+        "trim_start_seconds": "0.000",
+        "trim_end_seconds": "30.000"
+      },
+      "expected_output": {
+        "geometry": {"width": 1280, "height": 720},
+        "aspect_ratio": "16:9",
+        "frame_rate": {"fps_num": 24, "fps_den": 1},
+        "resolution": "720p"
+      },
+      "generation": {
+        "model_id": "model_bytedance-seedance-2-5",
+        "mode": "reference",
+        "parameters": {
+          "prompt": "@image1 defines performer continuity. @audio1 defines timing only. A deliberate performance shot with a stable closing composition.",
+          "duration": 30,
+          "resolution": "720p",
+          "outputFormat": "mp4",
+          "aspectRatio": "16:9",
+          "generateAudio": false,
+          "referenceImages": ["asset_i"],
+          "referenceAudio": ["asset_a"]
+        }
+      }
+    }
+  ]
+}

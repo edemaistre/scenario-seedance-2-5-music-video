@@ -1,0 +1,19 @@
+# Deliverable Version History
+
+Before overwriting a deliverable, copy its existing state to `versions/vN YYYY-MM-DD label/` and record the change here.
+
+## v1 2026-08-07 initial-template
+
+- Preserved the initialized `SKILL.md` template before the Task 1 core-contract rewrite.
+
+## v5 2026-08-07 interrupted-task-3-draft
+
+- Preserved the interrupted Task 3 tests, fixtures, validator, example manifest, and version ledger before aligning the manifest with the canonical frame, rights, audio-policy, optional-source, and dated Seedance contract.
+
+## v6 2026-08-07 pre-task-3-review-fix
+
+- Preserved the complete Task 3 implementation, fixtures, example, report, and version ledger before review fix round 1.
+
+## v7 2026-08-07 pre-task-3-fix-round-2
+
+- Preserved the Task 3 validator, tests, report, and version ledger before strict numeric transport bounds were restored.

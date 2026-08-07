@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "master": {
+    "path": "masters/approved-master.wav",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "decoded_duration_seconds": 30.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "rights": {
+      "status": "authorized",
+      "basis": "user-confirmed master"
+    }
+  },
+  "delivery": {
+    "container": "mp4",
+    "geometry": {"width": 1280, "height": 720},
+    "aspect_ratio": "16:9",
+    "frame_rate": {"fps_num": 24, "fps_den": 1},
+    "resolution": "720p",
+    "audio_policy": {
+      "source": "supplied_master",
+      "start_seconds": "0.000",
+      "clip_audio": "discard",
+      "codec_policy": "copy_compatible_else_aac_320k"
+    }
+  },
+  "reference_pack": {
+    "source": "generated",
+    "approval": "approved",
+    "assets": [
+      {"id": "performer-anchor", "path": "references/performer-anchor.png", "scenario_asset_id": "asset_i", "roles": ["performer", "wardrobe"]},
+      {"id": "master-guide", "path": "masters/approved-master.wav", "scenario_asset_id": "asset_a", "roles": ["timing", "energy"]}
+    ]
+  },
+  "lyrics": {
+    "state": "uncertain",
+    "reason": "No supplied lyrics or reliable transcription are available."
+  },
+  "shots": [
+    {
+      "id": "shot-001",
+      "timeline": {"start_frame": 0, "end_frame": 720},
+      "planning": {
+        "section": "complete 30-second piece",
+        "music_or_lyric_function": "Carry the complete musical arc.",
+        "sync_events": [],
+        "information_density": "medium",
+        "handles": {"opening_seconds": "0.000", "closing_seconds": "0.000"},
+        "shot_family": "performance anchor",
+        "subject": "approved performer",
+        "action": "The performer moves deliberately through the approved world.",
+        "shot_size": "medium wide",
+        "camera_move": "slow forward track",
+        "lens_or_optics": "50 mm spherical",
+        "lighting": "soft directional key",
+        "palette": "approved treatment palette",
+        "realism": "cinematic realism",
+        "texture": "clean natural texture",
+        "film_stock_or_grain": "none",
+        "opening_composition": "The performer is centered with forward space.",
+        "closing_state": "The performer holds frame-right with a stable camera.",
+        "screen_direction": "left to right",
+        "motion_vector": "forward",
+        "transition_logic": "End on a stable phrase boundary.",
+        "continuity": {
+          "identity": ["match the approved performer"],
+          "wardrobe": ["preserve approved wardrobe"],
+          "product": [],
+          "props": [],
+          "world": ["preserve the approved location"],
+          "state": ["maintain established screen direction"]
+        },
+        "reference_roles": [
+          {"tag": "@image1", "scenario_asset_id": "asset_i", "role": "performer identity", "inherits": ["identity", "wardrobe"], "excludes": ["background", "text"]},
+          {"tag": "@audio1", "scenario_asset_id": "asset_a", "role": "timing and energy", "inherits": ["pulse", "phrase energy"], "excludes": ["voice", "lyrics", "soundtrack"]}
+        ]
+      },
+      "accepted_source": {
+        "path": "clips/shot-001.mp4",
+        "trim_start_seconds": "0.000",
+        "trim_end_seconds": "30.000"
+      },
+      "expected_output": {
+        "geometry": {"width": 1280, "height": 720},
+        "aspect_ratio": "16:9",
+        "frame_rate": {"fps_num": 24, "fps_den": 1},
+        "resolution": "720p"
+      },
+      "generation": {
+        "model_id": "model_bytedance-seedance-2-5",
+        "mode": "reference",
+        "parameters": {
+          "prompt": "@image1 defines performer continuity. @audio1 defines timing only. A deliberate performance shot with a stable closing composition.",
+          "duration": 30,
+          "resolution": "720p",
+          "outputFormat": "mp4",
+          "aspectRatio": "16:9",
+          "generateAudio": false,
+          "referenceImages": ["asset_i"],
+          "referenceAudio": ["asset_a"]
+        }
+      },
+      "production": {
+        "disposition": "accepted",
+        "attempts": [
+          {
+            "id": "attempt-001",
+            "schema_checked_on": "2026-08-07",
+            "dry_run_estimate": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"},
+            "approval": {"status": "approved", "record": "User approved the exact request."},
+            "job_id": "job_demo",
+            "output_id": "asset_out",
+            "known_cost": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"},
+            "acceptance": {"status": "accepted", "reason": "The inspected output passed the shot acceptance criteria."},
+            "reroll_diagnosis": null
+          }
+        ]
+      }
+    }
+  ]
+}

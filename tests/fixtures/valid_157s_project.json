@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "master": {
+    "path": "masters/approved-master.wav",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "decoded_duration_seconds": 157.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "rights": {"status": "authorized", "basis": "user-confirmed master"}
+  },
+  "delivery": {
+    "container": "mp4",
+    "geometry": {"width": 1280, "height": 720},
+    "aspect_ratio": "16:9",
+    "frame_rate": {"fps_num": 24, "fps_den": 1},
+    "resolution": "720p",
+    "audio_policy": {"source": "supplied_master", "start_seconds": "0.000", "clip_audio": "discard", "codec_policy": "copy_compatible_else_aac_320k"}
+  },
+  "reference_pack": {
+    "source": "supplied",
+    "approval": "approved",
+    "assets": [
+      {"id": "artist-photo", "path": "references/artist-photo.png", "scenario_asset_id": "asset_i", "roles": ["performer", "identity"]},
+      {"id": "master-guide", "path": "masters/approved-master.wav", "scenario_asset_id": "asset_a", "roles": ["timing", "energy"]}
+    ]
+  },
+  "lyrics": {
+    "state": "provided",
+    "certainty": "certain",
+    "source_path": "lyrics/approved.txt",
+    "sha256": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+  },
+  "shots": [
+    {
+      "id": "shot-001",
+      "timeline": {"start_frame": 0, "end_frame": 720},
+      "planning": {"section": "intro", "music_or_lyric_function": "Establish the song world.", "sync_events": [], "information_density": "low", "handles": {"opening_seconds": "0.000", "closing_seconds": "0.000"}, "shot_family": "performance anchor", "subject": "approved performer", "action": "The performer enters the world.", "shot_size": "medium wide", "camera_move": "slow forward track", "lens_or_optics": "50 mm spherical", "lighting": "soft directional key", "palette": "approved treatment palette", "realism": "cinematic realism", "texture": "clean natural texture", "film_stock_or_grain": "none", "opening_composition": "The world begins empty.", "closing_state": "The performer holds centered.", "screen_direction": "left to right", "motion_vector": "forward", "transition_logic": "Cut on the phrase boundary.", "continuity": {"identity": ["match approved performer"], "wardrobe": ["preserve approved wardrobe"], "product": [], "props": [], "world": ["preserve approved world"], "state": []}, "reference_roles": [{"tag": "@image1", "scenario_asset_id": "asset_i", "role": "performer identity", "inherits": ["identity"], "excludes": ["background"]}, {"tag": "@audio1", "scenario_asset_id": "asset_a", "role": "timing", "inherits": ["pulse"], "excludes": ["soundtrack"]}]},
+      "accepted_source": {"path": "clips/shot-001.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Intro anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}},
+      "production": {"disposition": "accepted", "attempts": [{"id": "attempt-001", "schema_checked_on": "2026-08-07", "dry_run_estimate": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "approval": {"status": "approved", "record": "User approved the exact request."}, "job_id": "job_s1", "output_id": "asset_o1", "known_cost": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "acceptance": {"status": "accepted", "reason": "The inspected output passed."}, "reroll_diagnosis": null}]}
+    },
+    {
+      "id": "shot-002",
+      "timeline": {"start_frame": 720, "end_frame": 1440},
+      "planning": {"section": "verse", "music_or_lyric_function": "Develop the first lyrical idea.", "sync_events": [], "information_density": "medium", "handles": {"opening_seconds": "0.000", "closing_seconds": "0.000"}, "shot_family": "performance anchor", "subject": "approved performer", "action": "The performer crosses the world.", "shot_size": "medium wide", "camera_move": "slow forward track", "lens_or_optics": "50 mm spherical", "lighting": "soft directional key", "palette": "approved treatment palette", "realism": "cinematic realism", "texture": "clean natural texture", "film_stock_or_grain": "none", "opening_composition": "The performer starts frame-left.", "closing_state": "The performer holds frame-right.", "screen_direction": "left to right", "motion_vector": "forward", "transition_logic": "Cut on the phrase boundary.", "continuity": {"identity": ["match approved performer"], "wardrobe": ["preserve approved wardrobe"], "product": [], "props": [], "world": ["preserve approved world"], "state": []}, "reference_roles": [{"tag": "@image1", "scenario_asset_id": "asset_i", "role": "performer identity", "inherits": ["identity"], "excludes": ["background"]}, {"tag": "@audio1", "scenario_asset_id": "asset_a", "role": "timing", "inherits": ["pulse"], "excludes": ["soundtrack"]}]},
+      "accepted_source": {"path": "clips/shot-002.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Verse anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}},
+      "production": {"disposition": "accepted", "attempts": [{"id": "attempt-001", "schema_checked_on": "2026-08-07", "dry_run_estimate": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "approval": {"status": "approved", "record": "User approved the exact request."}, "job_id": "job_s2", "output_id": "asset_o2", "known_cost": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "acceptance": {"status": "accepted", "reason": "The inspected output passed."}, "reroll_diagnosis": null}]}
+    },
+    {
+      "id": "shot-003",
+      "timeline": {"start_frame": 1440, "end_frame": 2160},
+      "planning": {"section": "pre-chorus", "music_or_lyric_function": "Build tension before the hook.", "sync_events": [], "information_density": "medium", "handles": {"opening_seconds": "0.000", "closing_seconds": "0.000"}, "shot_family": "performance anchor", "subject": "approved performer", "action": "The performer approaches the transition point.", "shot_size": "medium wide", "camera_move": "slow forward track", "lens_or_optics": "50 mm spherical", "lighting": "soft directional key", "palette": "approved treatment palette", "realism": "cinematic realism", "texture": "clean natural texture", "film_stock_or_grain": "none", "opening_composition": "The performer starts frame-left.", "closing_state": "The performer holds frame-right.", "screen_direction": "left to right", "motion_vector": "forward", "transition_logic": "Cut on the phrase boundary.", "continuity": {"identity": ["match approved performer"], "wardrobe": ["preserve approved wardrobe"], "product": [], "props": [], "world": ["preserve approved world"], "state": []}, "reference_roles": [{"tag": "@image1", "scenario_asset_id": "asset_i", "role": "performer identity", "inherits": ["identity"], "excludes": ["background"]}, {"tag": "@audio1", "scenario_asset_id": "asset_a", "role": "timing", "inherits": ["pulse"], "excludes": ["soundtrack"]}]},
+      "accepted_source": {"path": "clips/shot-003.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Pre-chorus anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}},
+      "production": {"disposition": "accepted", "attempts": [{"id": "attempt-001", "schema_checked_on": "2026-08-07", "dry_run_estimate": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "approval": {"status": "approved", "record": "User approved the exact request."}, "job_id": "job_s3", "output_id": "asset_o3", "known_cost": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "acceptance": {"status": "accepted", "reason": "The inspected output passed."}, "reroll_diagnosis": null}]}
+    },
+    {
+      "id": "shot-004",
+      "timeline": {"start_frame": 2160, "end_frame": 2880},
+      "planning": {"section": "chorus", "music_or_lyric_function": "Deliver the main hook.", "sync_events": [], "information_density": "high", "handles": {"opening_seconds": "0.000", "closing_seconds": "0.000"}, "shot_family": "performance anchor", "subject": "approved performer", "action": "The performer delivers the hook.", "shot_size": "medium wide", "camera_move": "slow forward track", "lens_or_optics": "50 mm spherical", "lighting": "soft directional key", "palette": "approved treatment palette", "realism": "cinematic realism", "texture": "clean natural texture", "film_stock_or_grain": "none", "opening_composition": "The performer starts centered.", "closing_state": "The performer holds frame-right.", "screen_direction": "left to right", "motion_vector": "forward", "transition_logic": "Cut on the phrase boundary.", "continuity": {"identity": ["match approved performer"], "wardrobe": ["preserve approved wardrobe"], "product": [], "props": [], "world": ["preserve approved world"], "state": []}, "reference_roles": [{"tag": "@image1", "scenario_asset_id": "asset_i", "role": "performer identity", "inherits": ["identity"], "excludes": ["background"]}, {"tag": "@audio1", "scenario_asset_id": "asset_a", "role": "timing", "inherits": ["pulse"], "excludes": ["soundtrack"]}]},
+      "accepted_source": {"path": "clips/shot-004.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Chorus anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}},
+      "production": {"disposition": "accepted", "attempts": [{"id": "attempt-001", "schema_checked_on": "2026-08-07", "dry_run_estimate": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "approval": {"status": "approved", "record": "User approved the exact request."}, "job_id": "job_s4", "output_id": "asset_o4", "known_cost": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "acceptance": {"status": "accepted", "reason": "The inspected output passed."}, "reroll_diagnosis": null}]}
+    },
+    {
+      "id": "shot-005",
+      "timeline": {"start_frame": 2880, "end_frame": 3600},
+      "planning": {"section": "bridge", "music_or_lyric_function": "Create contrast before the ending.", "sync_events": [], "information_density": "low", "handles": {"opening_seconds": "0.000", "closing_seconds": "0.000"}, "shot_family": "performance anchor", "subject": "approved performer", "action": "The performer pauses within the world.", "shot_size": "medium wide", "camera_move": "slow forward track", "lens_or_optics": "50 mm spherical", "lighting": "soft directional key", "palette": "approved treatment palette", "realism": "cinematic realism", "texture": "clean natural texture", "film_stock_or_grain": "none", "opening_composition": "The performer starts frame-left.", "closing_state": "The performer holds centered.", "screen_direction": "left to right", "motion_vector": "forward", "transition_logic": "Cut on the phrase boundary.", "continuity": {"identity": ["match approved performer"], "wardrobe": ["preserve approved wardrobe"], "product": [], "props": [], "world": ["preserve approved world"], "state": []}, "reference_roles": [{"tag": "@image1", "scenario_asset_id": "asset_i", "role": "performer identity", "inherits": ["identity"], "excludes": ["background"]}, {"tag": "@audio1", "scenario_asset_id": "asset_a", "role": "timing", "inherits": ["pulse"], "excludes": ["soundtrack"]}]},
+      "accepted_source": {"path": "clips/shot-005.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Bridge anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}},
+      "production": {"disposition": "accepted", "attempts": [{"id": "attempt-001", "schema_checked_on": "2026-08-07", "dry_run_estimate": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "approval": {"status": "approved", "record": "User approved the exact request."}, "job_id": "job_s5", "output_id": "asset_o5", "known_cost": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "acceptance": {"status": "accepted", "reason": "The inspected output passed."}, "reroll_diagnosis": null}]}
+    },
+    {
+      "id": "shot-006",
+      "timeline": {"start_frame": 3600, "end_frame": 3768},
+      "planning": {"section": "outro", "music_or_lyric_function": "Release the final phrase.", "sync_events": [], "information_density": "low", "handles": {"opening_seconds": "0.000", "closing_seconds": "0.000"}, "shot_family": "performance anchor", "subject": "approved performer", "action": "The performer settles into the ending image.", "shot_size": "medium wide", "camera_move": "slow forward track", "lens_or_optics": "50 mm spherical", "lighting": "soft directional key", "palette": "approved treatment palette", "realism": "cinematic realism", "texture": "clean natural texture", "film_stock_or_grain": "none", "opening_composition": "The performer starts frame-left.", "closing_state": "The performer holds the final image.", "screen_direction": "left to right", "motion_vector": "forward", "transition_logic": "Hold through the final transient.", "continuity": {"identity": ["match approved performer"], "wardrobe": ["preserve approved wardrobe"], "product": [], "props": [], "world": ["preserve approved world"], "state": []}, "reference_roles": [{"tag": "@image1", "scenario_asset_id": "asset_i", "role": "performer identity", "inherits": ["identity"], "excludes": ["background"]}, {"tag": "@audio1", "scenario_asset_id": "asset_a", "role": "timing", "inherits": ["pulse"], "excludes": ["soundtrack"]}]},
+      "accepted_source": {"path": "clips/shot-006.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "7.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Outro release.", "duration": 7, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}},
+      "production": {"disposition": "accepted", "attempts": [{"id": "attempt-001", "schema_checked_on": "2026-08-07", "dry_run_estimate": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "approval": {"status": "approved", "record": "User approved the exact request."}, "job_id": "job_s6", "output_id": "asset_o6", "known_cost": {"amount": 1, "unit": "SYNTHETIC_EXAMPLE_ONLY"}, "acceptance": {"status": "accepted", "reason": "The inspected output passed."}, "reroll_diagnosis": null}]}
+    }
+  ]
+}

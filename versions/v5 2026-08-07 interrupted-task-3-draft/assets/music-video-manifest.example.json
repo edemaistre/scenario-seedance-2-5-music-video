@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "master": {
+    "path": "masters/approved-master.wav",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "duration_seconds": 30.0,
+    "sample_rate": 44100,
+    "channels": 2
+  },
+  "delivery": {
+    "container": "mp4",
+    "geometry": {"width": 1280, "height": 720},
+    "aspect_ratio": "16:9",
+    "frame_rate": {"fps_num": 24, "fps_den": 1},
+    "resolution": "720p"
+  },
+  "reference_pack": {
+    "source": "generated",
+    "approval": "approved",
+    "assets": [
+      {"id": "performer-anchor", "path": "references/performer-anchor.png", "roles": ["performer", "wardrobe"]}
+    ]
+  },
+  "lyrics": {
+    "state": "scenario_transcription",
+    "certainty": "uncertain",
+    "transcript_path": "analysis/scenario-transcript.txt"
+  },
+  "shots": [
+    {
+      "id": "shot-001",
+      "timeline": {"start_frame": 0, "end_frame": 720},
+      "source": {
+        "path": "clips/shot-001.mp4",
+        "trim_start_seconds": "0.000",
+        "trim_end_seconds": "30.000"
+      },
+      "expected_output": {
+        "geometry": {"width": 1280, "height": 720},
+        "aspect_ratio": "16:9",
+        "frame_rate": {"fps_num": 24, "fps_den": 1},
+        "resolution": "720p"
+      },
+      "generation": {
+        "model_id": "model_bytedance-seedance-2-5",
+        "mode": "reference",
+        "tags": ["music-video", "approved-reference-pack"],
+        "parameters": {
+          "prompt": "A deliberate performance shot with a stable closing composition.",
+          "negativePrompt": "text, watermark, generated audio",
+          "duration": 30,
+          "resolution": "720p",
+          "format": "mp4",
+          "aspectRatio": "16:9",
+          "generateAudio": false,
+          "referenceImages": ["references/performer-anchor.png"],
+          "referenceAudio": ["masters/approved-master.wav"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# Media and generated project output
+output/
+work/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.flac
+*.mp3
+
+# Private Scenario and local data
+.env
+.env.*
+!*.example
+private/
+downloads/
+*.log
+
+# Operating system and editors
+.DS_Store
+.idea/
+.vscode/

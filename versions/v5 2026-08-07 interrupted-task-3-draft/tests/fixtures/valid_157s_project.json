@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "master": {
+    "path": "masters/approved-master.wav",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "duration_seconds": 157.0,
+    "sample_rate": 44100,
+    "channels": 2
+  },
+  "delivery": {
+    "container": "mp4",
+    "geometry": {"width": 1280, "height": 720},
+    "aspect_ratio": "16:9",
+    "frame_rate": {"fps_num": 24, "fps_den": 1},
+    "resolution": "720p"
+  },
+  "reference_pack": {
+    "source": "supplied",
+    "assets": [
+      {"id": "artist-photo", "path": "references/artist-photo.png", "roles": ["performer", "identity"]}
+    ]
+  },
+  "lyrics": {
+    "state": "provided",
+    "certainty": "certain",
+    "source_path": "lyrics/approved.txt",
+    "sha256": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+  },
+  "shots": [
+    {
+      "id": "shot-001",
+      "timeline": {"start_frame": 0, "end_frame": 720},
+      "source": {"path": "clips/shot-001.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "tags": ["music-video"], "parameters": {"prompt": "Intro anchor.", "negativePrompt": "text, watermark, generated audio", "duration": 30, "resolution": "720p", "format": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["references/artist-photo.png"], "referenceAudio": ["masters/approved-master.wav"]}}
+    },
+    {
+      "id": "shot-002",
+      "timeline": {"start_frame": 720, "end_frame": 1440},
+      "source": {"path": "clips/shot-002.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "tags": ["music-video"], "parameters": {"prompt": "Verse anchor.", "negativePrompt": "text, watermark, generated audio", "duration": 30, "resolution": "720p", "format": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["references/artist-photo.png"], "referenceAudio": ["masters/approved-master.wav"]}}
+    },
+    {
+      "id": "shot-003",
+      "timeline": {"start_frame": 1440, "end_frame": 2160},
+      "source": {"path": "clips/shot-003.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "tags": ["music-video"], "parameters": {"prompt": "Pre-chorus anchor.", "negativePrompt": "text, watermark, generated audio", "duration": 30, "resolution": "720p", "format": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["references/artist-photo.png"], "referenceAudio": ["masters/approved-master.wav"]}}
+    },
+    {
+      "id": "shot-004",
+      "timeline": {"start_frame": 2160, "end_frame": 2880},
+      "source": {"path": "clips/shot-004.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "tags": ["music-video"], "parameters": {"prompt": "Chorus anchor.", "negativePrompt": "text, watermark, generated audio", "duration": 30, "resolution": "720p", "format": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["references/artist-photo.png"], "referenceAudio": ["masters/approved-master.wav"]}}
+    },
+    {
+      "id": "shot-005",
+      "timeline": {"start_frame": 2880, "end_frame": 3600},
+      "source": {"path": "clips/shot-005.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "tags": ["music-video"], "parameters": {"prompt": "Bridge anchor.", "negativePrompt": "text, watermark, generated audio", "duration": 30, "resolution": "720p", "format": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["references/artist-photo.png"], "referenceAudio": ["masters/approved-master.wav"]}}
+    },
+    {
+      "id": "shot-006",
+      "timeline": {"start_frame": 3600, "end_frame": 3768},
+      "source": {"path": "clips/shot-006.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "7.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "tags": ["music-video"], "parameters": {"prompt": "Outro release.", "negativePrompt": "text, watermark, generated audio", "duration": 7, "resolution": "720p", "format": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["references/artist-photo.png"], "referenceAudio": ["masters/approved-master.wav"]}}
+    }
+  ]
+}

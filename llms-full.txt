@@ -1,0 +1,33 @@
+# Scenario Seedance 2.5 Music Video: full repository guide
+
+This repository contains an installable Agent Skill for complete music-video production through Scenario MCP and Seedance 2.5.
+
+## Outcome
+
+Given an authorized master of at least 30 seconds, the skill analyzes technical audio facts, lyrics and uncertainty, rhythm, sections, tone, texture, dynamics, story, and emotional turns. It asks once for visual references and constraints, creates a reference pack in Scenario when needed, develops three treatments, locks continuity, plans a no-gap frame EDL and animatic, cost-gates production, generates silent footage, assembles accepted clips, muxes the original master, and verifies the final MP4.
+
+## Operating files
+
+- `SKILL.md`: mandatory workflow and routing.
+- `agents/openai.yaml`: discovery metadata.
+- `references/model-contract.md`: dated Scenario Seedance schema and live-schema precedence.
+- `references/music-analysis-and-treatment.md`: exact-master analysis, lyrics, transcription, stems, sync map, and treatments.
+- `references/shot-design-and-prompting.md`: hybrid coverage, prompt checklist, reference roles, closing states, and reroll diagnosis.
+- `references/scenario-production.md`: workspace, uploads, three spend gates, reference creation, jobs, chapters, moderation, and rights.
+- `references/assembly-and-qa.md`: frame EDL, deterministic assembly, master-audio policy, verification, and release review.
+- `references/examples.md`: four structural, genre-neutral, anti-anchored examples.
+- `references/source-ledger.md`: official, practitioner, user-supplied, and frame-study evidence with claim boundaries.
+- `assets/`: intake, treatment, continuity bible, and manifest templates.
+- `scripts/analyze_audio.py`: immutable-source codec and duration facts, EBU R128 level measurements, and candidate musical timing signals.
+- `scripts/validate_project.py`: strict JSON, reference approval, shot planning, paid-attempt lifecycle, and complete frame-timeline validation.
+- `scripts/assemble_music_video.py`: silent visual conformance and atomic original-master mux.
+- `scripts/verify_delivery.py`: MP4 container, stream, timing, frame, hash, codec, and audio-provenance verification.
+- `scripts/package_skill.py`: deterministic no-overwrite archive creation from a privacy-audited operational allowlist.
+
+## Safety and privacy
+
+Do not publish masters, complete lyrics, references, private Scenario IDs, credentials, signed URLs, or generated user media. Confirm rights, consent, product truth, cultural context, minors, unsafe acts, explicit themes, strobing, and photosensitivity. Silent generation exists for fidelity and deterministic mastering, never moderation evasion.
+
+## Scenario contract
+
+The dated 2026-08-07 target is `model_bytedance-seedance-2-5`, with 4 through 30 seconds or Auto, 480p or 720p, typed image/video/audio reference arrays, MP4 or MOV, and optional generated audio. Refresh `model_schema_get` every session. The live schema always wins.

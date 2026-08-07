@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# Media and generated project output
+output/
+work/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.aac
+*.aif
+*.aiff
+*.caf
+*.ogg
+*.opus
+*.wma
+*.webm
+*.m4v
+*.avi
+*.mpg
+*.mpeg
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.heif
+*.avif
+*.exr
+*.svg
+*.pdf
+*.psd
+*.ai
+
+# Private Scenario and local data
+.env
+.env.*
+!*.example
+private/
+downloads/
+*.log
+
+# Operating system and editors
+.DS_Store
+.idea/
+.vscode/

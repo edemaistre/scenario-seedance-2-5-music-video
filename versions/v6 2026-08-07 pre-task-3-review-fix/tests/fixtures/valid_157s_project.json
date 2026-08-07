@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "master": {
+    "path": "masters/approved-master.wav",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "decoded_duration_seconds": 157.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "rights": {"status": "authorized", "basis": "user-confirmed master"}
+  },
+  "delivery": {
+    "container": "mp4",
+    "geometry": {"width": 1280, "height": 720},
+    "aspect_ratio": "16:9",
+    "frame_rate": {"fps_num": 24, "fps_den": 1},
+    "resolution": "720p",
+    "audio_policy": {"source": "supplied_master", "start_seconds": "0.000", "clip_audio": "discard", "codec_policy": "copy_compatible_else_aac_320k"}
+  },
+  "reference_pack": {
+    "source": "supplied",
+    "assets": [
+      {"id": "artist-photo", "path": "references/artist-photo.png", "scenario_asset_id": "asset_i", "roles": ["performer", "identity"]}
+    ]
+  },
+  "lyrics": {
+    "state": "provided",
+    "certainty": "certain",
+    "source_path": "lyrics/approved.txt",
+    "sha256": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+  },
+  "shots": [
+    {
+      "id": "shot-001",
+      "timeline": {"start_frame": 0, "end_frame": 720},
+      "accepted_source": {"path": "clips/shot-001.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Intro anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}}
+    },
+    {
+      "id": "shot-002",
+      "timeline": {"start_frame": 720, "end_frame": 1440},
+      "accepted_source": {"path": "clips/shot-002.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Verse anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}}
+    },
+    {
+      "id": "shot-003",
+      "timeline": {"start_frame": 1440, "end_frame": 2160},
+      "accepted_source": {"path": "clips/shot-003.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Pre-chorus anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}}
+    },
+    {
+      "id": "shot-004",
+      "timeline": {"start_frame": 2160, "end_frame": 2880},
+      "accepted_source": {"path": "clips/shot-004.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Chorus anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}}
+    },
+    {
+      "id": "shot-005",
+      "timeline": {"start_frame": 2880, "end_frame": 3600},
+      "accepted_source": {"path": "clips/shot-005.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "30.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Bridge anchor.", "duration": 30, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}}
+    },
+    {
+      "id": "shot-006",
+      "timeline": {"start_frame": 3600, "end_frame": 3768},
+      "accepted_source": {"path": "clips/shot-006.mp4", "trim_start_seconds": "0.000", "trim_end_seconds": "7.000"},
+      "expected_output": {"geometry": {"width": 1280, "height": 720}, "aspect_ratio": "16:9", "frame_rate": {"fps_num": 24, "fps_den": 1}, "resolution": "720p"},
+      "generation": {"model_id": "model_bytedance-seedance-2-5", "mode": "reference", "parameters": {"prompt": "@image1 defines identity. @audio1 defines timing only. Outro release.", "duration": 7, "resolution": "720p", "outputFormat": "mp4", "aspectRatio": "16:9", "generateAudio": false, "referenceImages": ["asset_i"], "referenceAudio": ["asset_a"]}}
+    }
+  ]
+}

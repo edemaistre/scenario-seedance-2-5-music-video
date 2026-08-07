@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scenario Seedance 2.5 Music Video"
+  short_description: "Turn any song into a finished Seedance music video"
+  default_prompt: "Use $scenario-seedance-2-5-music-video to turn my supplied master audio into a fully assembled, music-responsive video through Scenario MCP."
