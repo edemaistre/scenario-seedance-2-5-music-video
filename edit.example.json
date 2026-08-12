@@ -1,0 +1,14 @@
+{
+  "master": "master.mp3",
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "shots": [
+    {"clip": "clips/01-intro.mp4", "at": 0.0},
+    {"clip": "clips/02-verse.mp4", "at": 12.5},
+    {"clip": "clips/03-build.mp4", "at": 30.625},
+    {"clip": "clips/04-chorus.mp4", "at": 39.083, "in": 1.0},
+    {"clip": "clips/05-peak.mp4", "at": 48.083},
+    {"clip": "clips/06-outro.mp4", "at": 55.0}
+  ]
+}

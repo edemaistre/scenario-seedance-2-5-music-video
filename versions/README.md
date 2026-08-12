@@ -101,3 +101,7 @@ Before overwriting a deliverable, copy its existing state to `versions/vN YYYY-M
 ## v25 2026-08-07 pre-final-package-refresh
 
 - Preserved the prior installable archive, ignore rules, and version ledger before rebuilding and reinstalling for exact source, archive, and installed-copy parity.
+
+## v26 2026-08-12 pre-simplification-rewrite
+
+- Preserved the complete v1.0.0 skill, the 2900 line script set, the 113 test suite, the seven reference documents, the four templates, the agent manifest, and the superpowers design docs before the v2.0.0 rewrite reduced the skill to five steps, two scripts, one reference page, and 26 tests.

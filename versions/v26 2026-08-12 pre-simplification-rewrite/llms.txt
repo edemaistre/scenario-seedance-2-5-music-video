@@ -1,0 +1,15 @@
+# Scenario Seedance 2.5 Music Video
+
+Public Agent Skill for turning an authorized music master of at least 30 seconds into one fully assembled and verified MP4 through Scenario MCP.
+
+Primary instructions: `SKILL.md`
+Model boundary: `references/model-contract.md`
+Music analysis: `references/music-analysis-and-treatment.md`
+Shot design: `references/shot-design-and-prompting.md`
+Scenario operations: `references/scenario-production.md`
+Assembly and QA: `references/assembly-and-qa.md`
+Examples: `references/examples.md`
+Evidence: `references/source-ledger.md`
+Packaging: `scripts/package_skill.py`
+
+Core rule: Seedance footage is generated with `generateAudio: false`; the immutable supplied master is muxed once as the final soundtrack. Every supplied or generated reference pack requires explicit approval, and every shot preserves planning plus paid-attempt provenance.
