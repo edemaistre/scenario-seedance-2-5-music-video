@@ -23,5 +23,7 @@ jobs:
           sudo apt-get install -y ffmpeg
           ffmpeg -version
           ffprobe -version
+      - name: Install Python dependencies
+        run: python3 -m pip install -r requirements.txt
       - name: Run tests
         run: python3 -B -m unittest discover -s tests -v

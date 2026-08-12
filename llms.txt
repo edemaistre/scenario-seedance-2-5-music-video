@@ -1,15 +1,35 @@
 # Scenario Seedance 2.5 Music Video
 
-Public Agent Skill for turning an authorized music master of at least 30 seconds into one fully assembled and verified MP4 through Scenario MCP.
+> An Agent Skill that turns a song into a finished music video with Scenario and Seedance 2.5. Five
+> steps: song, lyrics, story, frames, video. The supplied master is the soundtrack and is copied, not
+> re-encoded.
 
-Primary instructions: `SKILL.md`
-Model boundary: `references/model-contract.md`
-Music analysis: `references/music-analysis-and-treatment.md`
-Shot design: `references/shot-design-and-prompting.md`
-Scenario operations: `references/scenario-production.md`
-Assembly and QA: `references/assembly-and-qa.md`
-Examples: `references/examples.md`
-Evidence: `references/source-ledger.md`
-Packaging: `scripts/package_skill.py`
+Requires Python 3.11+, FFmpeg, FFprobe, numpy, and an authenticated Scenario MCP.
 
-Core rule: Seedance footage is generated with `generateAudio: false`; the immutable supplied master is muxed once as the final soundtrack. Every supplied or generated reference pack requires explicit approval, and every shot preserves planning plus paid-attempt provenance.
+## Workflow
+
+- [SKILL.md](SKILL.md): the five step workflow and the non-negotiables.
+
+## Reference
+
+- [references/seedance.md](references/seedance.md): measured Seedance 2.5 contract, costs, and the
+  rule that decides whether a shot can open in a given state. In reference-to-video mode frame one is
+  anchored to the reference world's base state and no prompt overrides it. Use `image` for first
+  frame control.
+
+## Tools
+
+- [scripts/song.py](scripts/song.py): read the master. SHA-256, duration, loudness, tempo, sections,
+  cut candidates.
+- [scripts/build.py](scripts/build.py): cut and verify in one ffmpeg pass. Conforms clips,
+  concatenates, muxes the untouched master, checks coverage, frame count, geometry and audio
+  integrity.
+- [edit.example.json](edit.example.json): the edit format. A master and a list of shots with start
+  times.
+
+## Project
+
+- [README.md](README.md): install, use, verification.
+- [CHANGELOG.md](CHANGELOG.md): v2.0.0 rewrite and what was removed.
+- [BUGS.md](BUGS.md): known limits and what was fixed.
+- [ROADMAP.md](ROADMAP.md): next steps and rejected ideas.
